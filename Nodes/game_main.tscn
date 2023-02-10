@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://by5hag7yshaw0"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_qynuw"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_qynuw")
+MainMenuPrefab = "res://Nodes/game_main.tscn"
+
+[node name="UICanvas" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameplayArea" type="Node2D" parent="."]
