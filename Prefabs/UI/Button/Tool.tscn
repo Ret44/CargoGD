@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://baho0k1kdn4e6"]
+
+[ext_resource type="Theme" uid="uid://cvhxuqx8fgtwf" path="res://Prefabs/UI/Button/Tool.theme" id="1_d1x26"]
+[ext_resource type="Script" path="res://Prefabs/UI/Button/Tool.gd" id="2_ubo72"]
+
+[node name="ToolButton" type="Button"]
+offset_right = 100.0
+offset_bottom = 100.0
+theme = ExtResource("1_d1x26")
+text = "1x1"
+script = ExtResource("2_ubo72")

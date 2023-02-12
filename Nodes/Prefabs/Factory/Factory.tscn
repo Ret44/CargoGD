@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ngd3gbr18l0m"]
+
+[ext_resource type="Script" path="res://Scripts/Factory/Factory.gd" id="1_ojuxb"]
+
+[node name="Factory" type="Node2D"]
+script = ExtResource("1_ojuxb")
+tile_prefab = "res://Nodes/Prefabs/Factory/FactoryTile.tscn"
+
+[node name="TileMap" type="Node2D" parent="."]

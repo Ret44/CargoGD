@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkhn5swok57vm"]
+
+[ext_resource type="Script" path="res://Nodes/Prefabs/Building.gd" id="1_da87i"]
+[ext_resource type="Texture2D" uid="uid://exxn85fl7tm1" path="res://ThirdParty/Sprites/metalPanel.png" id="2_fxnnq"]
+
+[node name="TestBuilding" type="Node2D"]
+script = ExtResource("1_da87i")
+building_name = "Test Building"
+button_name = "TEST1"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_fxnnq")

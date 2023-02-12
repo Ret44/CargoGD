@@ -1,15 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://by5hag7yshaw0"]
+[gd_scene load_steps=5 format=3 uid="uid://by5hag7yshaw0"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_qynuw"]
+[ext_resource type="PackedScene" uid="uid://bxum81yug882b" path="res://Nodes/Prefabs/UI/UIToolset.tscn" id="2_3e0ci"]
+[ext_resource type="Script" path="res://Scripts/Buildings.gd" id="2_ryeju"]
+[ext_resource type="PackedScene" uid="uid://bkhn5swok57vm" path="res://Nodes/Prefabs/TestBuilding.tscn" id="3_se7l7"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_qynuw")
-MainMenuPrefab = "res://Nodes/game_main.tscn"
+prefab_factory = "res://Nodes/Prefabs/Factory/Factory.tscn"
+prefab_UI_debug = "res://Nodes/Prefabs/UI/UIDebug.tscn"
+
+[node name="Buildings" type="Node" parent="."]
+script = ExtResource("2_ryeju")
+building_list = Array[NodePath]([NodePath("TestBuilding")])
+
+[node name="TestBuilding" parent="Buildings" instance=ExtResource("3_se7l7")]
+position = Vector2(-705, -390)
+
+[node name="UIToolset" parent="." instance=ExtResource("2_3e0ci")]
 
 [node name="UICanvas" type="Control" parent="."]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="GameplayArea" type="Node2D" parent="."]

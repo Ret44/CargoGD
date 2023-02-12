@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bm6hw8mgsjcp6"]
+
+[ext_resource type="SystemFont" uid="uid://dcjm3n8km3shc" path="res://Themes/Fonts/log_font.tres" id="1_6lhgl"]
+
+[resource]
+default_font = ExtResource("1_6lhgl")
+default_font_size = 24

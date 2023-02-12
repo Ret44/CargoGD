@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxum81yug882b"]
+
+[ext_resource type="PackedScene" uid="uid://baho0k1kdn4e6" path="res://Prefabs/UI/Button/Tool.tscn" id="1_w0upe"]
+[ext_resource type="Script" path="res://Scripts/UI/UIToolset.gd" id="1_wwr6l"]
+
+[sub_resource type="Theme" id="Theme_qaqf3"]
+default_font_size = 30
+
+[node name="UIToolset" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_wwr6l")
+factory_path = null
+selected = NodePath("Label")
+ui_tool_button_prefab_path = null
+
+[node name="ToolButton" parent="." instance=ExtResource("1_w0upe")]
+layout_mode = 0
+
+[node name="ToolButton2" parent="." instance=ExtResource("1_w0upe")]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+text = "2x2"
+
+[node name="ToolButton3" parent="." instance=ExtResource("1_w0upe")]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 300.0
+text = "3x3"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 453.0
+offset_bottom = 141.0
+theme = SubResource("Theme_qaqf3")
+text = "Selected:
+"
+
+[connection signal="pressed" from="ToolButton" to="." method="_on_tool_button_pressed"]
+[connection signal="pressed" from="ToolButton2" to="." method="_on_tool_button_2_pressed"]
+[connection signal="pressed" from="ToolButton3" to="." method="_on_tool_button_3_pressed"]
+
+[editable path="ToolButton"]
+[editable path="ToolButton2"]
+[editable path="ToolButton3"]

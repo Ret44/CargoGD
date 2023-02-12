@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://5sjs1n22qech"]
+
+[ext_resource type="Script" path="res://Scripts/UI/UIDebug.gd" id="1_cx83n"]
+[ext_resource type="Theme" uid="uid://bm6hw8mgsjcp6" path="res://Themes/log_theme.tres" id="2_xtyi4"]
+
+[node name="UIDebug" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cx83n")
+
+[node name="DebugLog" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1067, 960)
+theme = ExtResource("2_xtyi4")
+text = "TEST"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1104.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Send"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = -175.0
+grow_horizontal = 2
+grow_vertical = 0

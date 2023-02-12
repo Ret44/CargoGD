@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://1u8wjt8oy8wq"]
+
+[ext_resource type="Script" path="res://Scripts/Factory/FactoryTile.gd" id="1_pdbcy"]
+[ext_resource type="Texture2D" uid="uid://c8kkl1ut4ypps" path="res://ThirdParty/Sprites/glassPanel.png" id="1_rubt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc25m"]
+size = Vector2(100, 100)
+
+[node name="FactoryTile" type="Node2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_pdbcy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rubt5")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_sc25m")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -47.0
+offset_right = 45.0
+offset_bottom = 51.0
+text = "FACTORY
+TILE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
