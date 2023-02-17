@@ -19,14 +19,14 @@ func _ready():
 func _process(delta):
 	pass
 
-func spawn_tool_button(tool):
+func spawn_tool_button(building):
 	var start_x : int = 0
 	for i in range(0, tool_buttons.size()) :
 		if(start_x < tool_buttons[i].position.x):
 			start_x = tool_buttons[i].position.x + tool_buttons[i].size.x
-	var new_btn = Prefabs.instantiate_prefab(ui_tool_button_prefab)
+	var new_btn = Prefabs.instantiate_prefab(ui_tool_button_prefab, self)
 	new_btn.position = Vector2(start_x,0)
-	new_btn.text = tool.
+	new_btn.text = building.button_name
 	pass
 
 func _on_tool_button_pressed():
