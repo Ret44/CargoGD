@@ -7,9 +7,7 @@
 script = ExtResource("1_da87i")
 building_name = "Test Building"
 button_name = "TEST1"
-debug_trigger_action = null
 building_element_positons = Array[Vector2]([Vector2(0, 0)])
-building_element_nodes = Array[NodePath]([NodePath("Sprite2D")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.75)

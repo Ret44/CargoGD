@@ -8,8 +8,6 @@ extends Node
 var UI_canvas : Control
 var Gameplay_Area : Node2D
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	UI_canvas = get_node("UICanvas")

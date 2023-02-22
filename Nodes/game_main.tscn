@@ -12,7 +12,6 @@ prefab_UI_debug = "res://Nodes/Prefabs/UI/UIDebug.tscn"
 [node name="Buildings" type="Node" parent="."]
 script = ExtResource("2_ryeju")
 building_list = Array[NodePath]([NodePath("TestBuilding")])
-ui_toolset_path = null
 
 [node name="TestBuilding" parent="Buildings" instance=ExtResource("3_se7l7")]
 position = Vector2(-705, -390)
@@ -28,3 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameplayArea" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+editor_draw_limits = true
+editor_draw_drag_margin = true
