@@ -28,6 +28,4 @@ grow_vertical = 2
 
 [node name="GameplayArea" type="Node2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-editor_draw_limits = true
-editor_draw_drag_margin = true
+[node name="MainCamera" type="Camera2D" parent="."]

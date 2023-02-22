@@ -53,7 +53,7 @@ func generate_tile_set(sizex, sizey):
 		for y in range(0, sizey):
 			var tile_instance : Node2D = Prefabs.instantiate_prefab(tile_prefab, tile_map_root)
 			tile_instance.name = "Tile[" + str(x) + "][" + str(y) + "]"
-			tile_instance.position = Vector2(offset.x + (x*tile_size.x), offset.y + (y*tile_size.y))
+			tile_instance.position = Vector2((x*tile_size.x), (y*tile_size.y))
 			tile_instance.setup(self, Vector2(x, y))
 	pass
 
